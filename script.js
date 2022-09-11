@@ -38,6 +38,7 @@ function initNewGame() {
   scores[1] = 0;
   scores_[1].textContent = "0";
   currScores_[1].textContent = "0";
+  currScore = 0;
   dice_.classList.add("hidden");
   if (players_[currPlayer].classList.contains("player--winner"))
     // we may call it in case of resetting the game or initializing the game.
