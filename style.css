@@ -97,7 +97,7 @@ button h3{
     font-size: 1.5rem;
 }
 
-/* middle section roll-hold-new */
+/* middle section roll-hold-new & dice */
 
 .controls{
     position: absolute;
@@ -143,8 +143,20 @@ button h3{
     margin: auto;
 }
 
+.dice{
+    position: absolute;
+    width:  50%;
+    display: block;
+    left: 0px;
+    right: 0px;
+    top:25%;
+    margin: auto;
+
+}
 
 
+/* hide the dice at first */
 
-
-
+.hide{
+    display: none;
+}
