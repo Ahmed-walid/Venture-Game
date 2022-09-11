@@ -9,9 +9,21 @@
   </head>
   <body>
     <main>
-      <section class="player--1 active-player">
+      <section class="player--0 active-player">
         <header>
           <h2>Player 1</h2>
+          <h2 class="player-0-score">0</h2>
+        </header>
+
+        <button>
+          <h3>current</h3>
+          <div class="player-0-currscore">0</div>
+        </button>
+      </section>
+
+      <section class="player player--1">
+        <header>
+          <h2>Player 2</h2>
           <h2 class="player-1-score">0</h2>
         </header>
 
@@ -20,22 +32,10 @@
           <div class="player-1-currscore">0</div>
         </button>
       </section>
-
-      <section class="player player--2">
-        <header>
-          <h2>Player 2</h2>
-          <h2 class="player-2-score">0</h2>
-        </header>
-
-        <button>
-          <h3>current</h3>
-          <div class="player-2-currscore">0</div>
-        </button>
-      </section>
     
      <section class="controls">
         <button class="btn new">🔄 new game</button>
-        <img src="images/dice-5.png" alt="dice image" class="dice">
+        <img src="images/dice-5.png" alt="dice image" class="dice hidden">
         <button class="btn roll">🎲 roll dice</button>
         <button class="btn hold">📥 hold</button>
      </section>

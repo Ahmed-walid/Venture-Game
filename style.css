@@ -84,7 +84,7 @@ button h3{
 
 /* header */
 
-.player-1-score, .player-2-score{
+.player-0-score, .player-1-score{
     font-size: 3rem;
     color: rgb(199, 54, 95);
 }
@@ -92,7 +92,7 @@ button h3{
 
 /*current score*/
 
-.player-1-currscore, .player-2-currscore{
+.player-0-currscore, .player-1-currscore{
     margin-top: 10%;
     font-size: 1.5rem;
 }
@@ -151,7 +151,7 @@ button h3{
     right: 0px;
     top:25%;
     margin: auto;
-
+    box-shadow: 10px 4px 40px 40px rgba(0, 0, 0, 0.1);
 }
 
 
