@@ -1,0 +1,150 @@
+@import url('https://fonts.googleapis.com/css2?family=Nunito&display=swap');
+
+*{
+    box-sizing: border-box;
+    margin: 0px;
+    padding: 0px;
+    font-family: inherit;
+}
+
+html{
+    font-size: 20px;
+}
+
+body{
+    height: 100vh;
+    background-image: linear-gradient(to top left, #753682 0%, #bf2e34 100%);
+    font-family: Nunito, sans-serif;
+    color: rgb(51, 51, 51);
+}
+
+main{
+    position: relative;
+    width: 55vw;
+    height: 60vh;
+    background-color: rgba(255, 255, 255, 0.35);
+    margin: 20vh 22.5vw;
+    overflow: hidden;
+    box-shadow: 10px 4px 40px 40px rgba(0, 0, 0, 0.1);
+}
+
+section{
+    float: left;
+    height: 100%;
+    width: 50%;
+    padding: 7% 10%;
+}
+
+section header{
+    text-align: center;
+    margin-bottom: 40% ;
+}
+
+section header h2{
+    font-size: 2rem;
+    font-weight: inherit;
+    text-transform: uppercase;
+    padding: 5px;
+}
+
+section button{
+    display: block;
+    margin: auto;
+    width: 70%;
+    height: 30%;
+    background-color: #c7365f;
+    opacity: 0.8;
+    border: none;
+    color: white;
+    font-size: 100%;
+    text-transform: uppercase;
+    border-radius: 20px;
+}
+
+button{
+    font-weight: inherit;
+}
+
+button h3{
+    font-weight: inherit;
+    font-size: 1.1rem;
+}
+
+
+/* Modes */
+.player{
+    font-weight: normal;
+}
+.active-player{
+    font-weight: bold;
+    background-color:rgba(255, 255, 255, 0.4);
+}
+
+/* */
+
+/* header */
+
+.player-1-score, .player-2-score{
+    font-size: 3rem;
+    color: rgb(199, 54, 95);
+}
+
+
+/*current score*/
+
+.player-1-currscore, .player-2-currscore{
+    margin-top: 10%;
+    font-size: 1.5rem;
+}
+
+/* middle section roll-hold-new */
+
+.controls{
+    position: absolute;
+    height: 100%;
+    width: 30%;
+    left: 50%;
+    margin-left: -15%;
+    padding: 0px;
+}
+
+.btn{
+    height: 7%;
+    color: rgb(68, 68, 68);
+    text-transform: uppercase;
+    font-weight: inherit;
+    border-radius: 30px;
+    background-color: rgb(255, 255, 255);
+    box-shadow: 3px 4px 17px 10px rgba(0, 0, 0, 0.1);
+    transition: all 0.2;
+    cursor: pointer;
+    position: absolute;
+    right: 0px;
+    left:  0px;
+}
+
+
+.btn:active{
+    transform: translateY(5%);
+    box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.15);
+}
+
+.new{
+    width: 65%;
+    top: 7%
+}
+.roll{
+    width: 65%;
+    top: 65%;
+}
+.hold{
+    width: 45%;
+    top: 75%;
+    margin: auto;
+}
+
+
+
+
+
+
