@@ -157,6 +157,6 @@ button h3{
 
 /* hide the dice at first */
 
-.hide{
+.hidden{
     display: none;
 }
