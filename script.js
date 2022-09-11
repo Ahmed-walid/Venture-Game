@@ -24,6 +24,7 @@ let currPlayer = 0;
 
 initNewGame();
 btnRoll_.addEventListener("click", rollDice);
+btnHold_.addEventListener("click", hold);
 
 function initNewGame() {
   scores [0] = 0;
@@ -55,14 +56,23 @@ function rollDice() {
 
   } else {
     // switch to the other player.
-    players_[currPlayer].classList.remove("active-player");
-    players_[currPlayer].classList.add("player");
-    scores[currPlayer] += currScore;
-    scores_[currPlayer].textContent = scores[currPlayer];
+    switchPlayer();
+  }
+}
+
+function switchPlayer(){
+    players_[currPlayer].classList.toggle("active-player");
+    players_[currPlayer].classList.toggle("player");
     currScores_[currPlayer].textContent = "0";
     currScore = 0;
     currPlayer  = Number(!currPlayer);
-    players_[currPlayer].classList.add("active-player");
-    players_[currPlayer].classList.remove("player");
-  }
+    players_[currPlayer].classList.toggle("active-player");
+    players_[currPlayer].classList.toggle("player");
+}
+
+function hold(){
+    // update the score then switch.
+    scores[currPlayer] += currScore;
+    scores_[currPlayer].textContent = scores[currPlayer];
+    switchPlayer();
 }
