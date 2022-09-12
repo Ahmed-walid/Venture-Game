@@ -1,9 +1,10 @@
 "use strict";
 
+// Game's state/global variables.
 const WINNING_VALUE = 100;
 let isGameFinished = false;
 
-// DOM ELEMENTS
+// DOM ELEMENTS.
 const score0_ = document.querySelector(".player-0-score");
 const score1_ = document.querySelector(".player-1-score");
 const dice_ = document.querySelector(".dice");
@@ -19,43 +20,47 @@ const currScores_ = [currScore0_, currScore1_];
 const scores_ = [score0_, score1_];
 const players_ = [player0_, player1_];
 
-// Players' score
+// Players' score.
 let scores = [0, 0];
 let currScore = 0;
 let currPlayer = 0;
 
-// Event Listeners
+// Intializing the game.
 initNewGame();
+
+// Event Listeners
 btnRoll_.addEventListener("click", rollDice);
 btnHold_.addEventListener("click", hold);
 btnNew_.addEventListener("click", initNewGame);
 
-// Handelers
+// Handelers.
 function initNewGame() {
-  scores[0] = 0;
   currScores_[0].textContent = "0";
-  scores_[0].textContent = "0";
-  scores[1] = 0;
-  scores_[1].textContent = "0";
   currScores_[1].textContent = "0";
+  scores_[0].textContent = "0";
+  scores_[1].textContent = "0";
+
+  scores[0] = 0;
+  scores[1] = 0;
   currScore = 0;
   dice_.classList.add("hidden");
+  isGameFinished = false;
+  
   if (players_[currPlayer].classList.contains("player--winner"))
     // we may call it in case of resetting the game or initializing the game.
     players_[currPlayer].classList.remove("player--winner");
-  isGameFinished = false;
 }
 
 function rollDice() {
   if (isGameFinished) return;
-  // Roll the dice
+  // Roll the dice.
   const dice = Math.trunc(Math.random() * 6) + 1;
 
-  // Display the dice
+  // Display the dice.
   dice_.src = `images/dice-${dice}.png`;
   dice_.classList.remove("hidden");
 
-  //check if the rolled number is 1
+  //check if the rolled number is 1.
   if (dice !== 1) {
     currScore += dice;
     currScores_[currPlayer].textContent = currScore;
